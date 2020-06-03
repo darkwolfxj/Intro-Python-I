@@ -3,16 +3,12 @@ import sys
 
 def isPrime():
     num = int(sys.argv[1])
-    if num > 3:
-            if ((num % 2 == 0) or (num % 3 == 0)):
-                print("not prime")
-            else: 
-                i = 5
-                while i * i <= num try
-                    if num % i == 0 or num % (i + 2) == 0:
-                        print("not prime")
+    factors = []
+    for i in range(1,num+1):
+        if num % i == 0:
+            factors.append(i)
+    if len(factors) > 2:
+        print(f"{num} is not prime.")
     else:
-        print("prime")
-    print(num)
-
+        print(f"{num} is prime")
 isPrime()
